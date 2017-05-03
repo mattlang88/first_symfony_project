@@ -6,18 +6,15 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class LuckyController extends Controller
 {
 
-
-
-    /**
-     * @Route("/lucky/number")
-     */
     public function numberAction()
     {
         $number = mt_rand(0, 100);
-        return $this->render('lucky/number.html.twig', array('number' => $number));
+        return new Response("hello", 200);
+
     }
 }

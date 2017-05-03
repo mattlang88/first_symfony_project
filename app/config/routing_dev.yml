@@ -16,7 +16,3 @@ _errors:
 
 _main:
     resource: routing.yml
-
-#luckynumber:
-#    path:      /lucky/number
-#    defaults:  { _controller: AppBundle:Lucky:number}
