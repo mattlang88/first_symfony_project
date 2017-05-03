@@ -1,6 +1,6 @@
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
-luckynumber:
-    path:      /lucky/number
-    defaults:  { _controller: AppBundle:Lucky:number}
+#luckynumber:
+#    path:      /lucky/number
+#    defaults:  { _controller: AppBundle:Lucky:number}

@@ -11,9 +11,11 @@ class LuckyController extends Controller
 {
 
 
-    //Request $request
 
-    public function numberAction(Request $request)
+    /**
+     * @Route("/lucky/number")
+     */
+    public function numberAction()
     {
         $number = mt_rand(0, 100);
         return $this->render('lucky/number.html.twig', array('number' => $number));
