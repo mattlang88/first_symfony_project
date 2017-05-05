@@ -2,6 +2,14 @@ app:
     resource: '@AppBundle/Controller/'
     type: annotation
 
-luckynumber:
+luckynumberSmallNumbers:
     path:      /lucky/number/{max}
-    defaults:  { _controller: AppBundle:Lucky:number, max: 10}
+    defaults:  { _controller: AppBundle:Lucky:smallNumber, max: 10}
+    requirements:
+       max: \d+ #TODO: something to define numbers smaller  or equal to 10
+
+luckynumberBigNumbers:
+    path:      /lucky/number/{max}
+    defaults:  { _controller: AppBundle:Lucky:bigNumber, max: 10}
+    requirements:
+        max: \d+ #TODO: something to define numbers greater than 10
