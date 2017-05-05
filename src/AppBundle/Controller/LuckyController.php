@@ -11,10 +11,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class LuckyController extends Controller
 {
 
-    public function numberAction()
+    public function numberAction($max)
     {
-        $number = mt_rand(0, 100);
-        return new Response("hello", 200);
+        $number = mt_rand(0, $max);
+        return new Response($number, 200);
 
     }
 }
