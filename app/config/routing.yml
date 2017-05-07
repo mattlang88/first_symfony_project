@@ -6,10 +6,10 @@ luckynumberSmallNumbers:
     path:      /lucky/number/{max}
     defaults:  { _controller: AppBundle:Lucky:smallNumber, max: 10}
     requirements:
-       max: \d+ #TODO: something to define numbers smaller  or equal to 10
+       max: ^0*([0-9]|10)$
 
 luckynumberBigNumbers:
     path:      /lucky/number/{max}
     defaults:  { _controller: AppBundle:Lucky:bigNumber, max: 10}
     requirements:
-        max: \d+ #TODO: something to define numbers greater than 10
+        max: ^0*([1-9]{1,}[0-9]{1,})$
