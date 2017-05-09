@@ -13,3 +13,8 @@ luckynumberBigNumbers:
     defaults:  { _controller: AppBundle:Lucky:bigNumber, max: 10}
     requirements:
         max: ^0*([1-9]{1,}[0-9]{1,})$
+
+genus:
+    path:      /genus/{name}
+    defaults:  { _controller: AppBundle:Genus:showName}
+
