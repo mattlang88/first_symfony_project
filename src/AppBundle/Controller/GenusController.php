@@ -13,6 +13,15 @@ class GenusController extends Controller
 
     public function showNameAction($name)
     {
+        $logger = $this->container->get('logger');
+        $requeststack = $this->container->get('request_stack');
+
+        $clientIpHash = md5($requeststack->getCurrentRequest()->getClientIp());
+        $requestHeaderHash = md5($requeststack->getCurrentRequest()->headers);
+        $uniqueRequestHash = $clientIpHash+$requestHeaderHash;
+
+        $logger->addDebug("RequestId = $uniqueRequestHash; showNameAction called with parameter: $name");
+        $logger->addDebug("RequestId = $uniqueRequestHash; Creating template: $name");
 
     }
 
