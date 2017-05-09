@@ -22,8 +22,8 @@ class GenusController extends Controller
 
         $logger->addDebug("RequestId = $uniqueRequestHash; showNameAction called with parameter: $name");
         $logger->addDebug("RequestId = $uniqueRequestHash; Creating template: $name");
-
-        return $this->container->get('templating')->render(':genus:show.html.twig', [$name]);
+        $html = $this->container->get('templating')->render(':genus:show.html.twig', ['name' => $name]);
+        return new Response($html) ;
     }
 
 }
