@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
     <h1>{{ name }}</h1>
-{{ dump() }}
+    <h2>Members of the Simpsons:</h2>
+    <ul>
+        {% for character in losSimpsons %}
+        <li> {{ character }} </li>
+        {% endfor %}
+    </ul>
 </html>
