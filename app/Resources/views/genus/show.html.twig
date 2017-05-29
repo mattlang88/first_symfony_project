@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html.twig' %}
+{% block body %}
     <h1>{{ name }}</h1>
     <h2>Members of the Simpsons:</h2>
     <ul>
         {% for character in losSimpsons %}
-        <li> {{ character }} </li>
+            <li> {{ character }} </li>
         {% endfor %}
     </ul>
-</html>
+    {{ 'Hello everyone, you will read this!' }}
+{% endblock %}
+
+{% block extraContentWhichDoesNotExistInMotherTemplate %}
+    {{ 'Hello everyone, you will not read this!' }}
+{% endblock %}
