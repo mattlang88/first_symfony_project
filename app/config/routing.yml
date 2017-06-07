@@ -18,3 +18,7 @@ genus:
     path:      /genus/{name}
     defaults:  { _controller: AppBundle:Genus:showName}
 
+genusnote:
+    path:      /genus/{name}/notes
+    defaults:  { _controller: AppBundle:Genus:getNotes}
+    methods: [GET]
